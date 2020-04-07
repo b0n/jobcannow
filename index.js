@@ -3,8 +3,8 @@
  */
 require('dotenv').config();
 const puppeteer = require('puppeteer');
-const USER = process.env.USER;
-const PASS = process.env.PASS;
+const USER = process.env.JOBCAN_USER;
+const PASS = process.env.JOBCAN_PASS;
 const url_login = 'https://id.jobcan.jp/users/sign_in?app_key=atd';
 const url_mod = 'https://ssl.jobcan.jp/employee/adit/modify/';
 const url_list = 'https://ssl.jobcan.jp/employee/attendance';
