@@ -21,7 +21,7 @@ puppeteer.launch({
 
     // login
     await page.goto(url_login);
-    await page.waitForSelector('a.saml-login', {timeout: 10000});
+    await page.waitForSelector('input[name="commit"]', {timeout: 10000});
     await page.type("#user_email", USER);
     await page.type("#user_password", PASS);
     await page.click('input[name="commit"]');
