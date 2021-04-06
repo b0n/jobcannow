@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "slackで打刻の許可出なかったので作りました",
   "main": "index.js",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "moment": "^2.24.0",
-    "puppeteer": "^2.1.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/b0n/jobcannow/issues"
   },
-  "homepage": "https://github.com/b0n/jobcannow#readme"
+  "homepage": "https://github.com/b0n/jobcannow#readme",
+  "dependencies": {
+    "chrome-paths": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "edge-paths": "^2.2.1",
+    "moment": "^2.29.1",
+    "puppeteer-core": "^8.0.0"
+  }
 }

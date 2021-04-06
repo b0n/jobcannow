@@ -1,8 +1,13 @@
 /**
  * jobcanで現在時刻を打刻修正します
  */
+const puppeteer = require('puppeteer-core');
+const edgePaths = require("edge-paths");
+const chromePaths = require("chrome-paths");
+const EDGE_PATH = edgePaths.getEdgePath();
+const CHROME_PATH = chromePaths.chrome;
+
 require('dotenv').config();
-const puppeteer = require('puppeteer');
 const USER = process.env.JOBCAN_USER;
 const PASS = process.env.JOBCAN_PASS;
 const url_login = 'https://id.jobcan.jp/users/sign_in?app_key=atd';
@@ -14,6 +19,7 @@ const NOW = moment().format('HHmm');
 puppeteer.launch({
     ignoreHTTPSErrors: true,
     headless: false,
+    executablePath: CHROME_PATH
     //slowMo: 10
 }).then(async browser => {
     const page = await browser.newPage();
